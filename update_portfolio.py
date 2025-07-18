@@ -33,3 +33,7 @@ def get_projects(username: str):
         print("✅ Repository data saved to 'projects_data.json'")
     else:
         print(f"❌ Failed to fetch data. Status code: {response.status_code}")
+
+
+if __name__ == "__main__":
+    get_projects("kishandev2509")
