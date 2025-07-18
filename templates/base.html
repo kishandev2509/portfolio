@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="A showcase of my projects, skills, and experience. Welcome to my portfolio website." />
+		<meta name="keywords" content="portfolio, projects, web development, programming, skills, experience" />
+		<title>{% block title %}My Portfolio{% endblock title %}</title>
+        {% block head %}{% endblock head %}
+		<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	</head>
+	<body class="bg-gray-900 text-white">
+		{% include "header.html" %}
+		<main class="px-6 py-8">{% block content %}{% endblock content %}</main>
+		{% include "footer.html" %}
+
+		<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	</body>
+</html>

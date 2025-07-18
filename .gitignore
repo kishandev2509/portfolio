@@ -1,0 +1,68 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pkl
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Flask
+instance/
+*.db
+*.sqlite3
+*.log
+
+# Compiled files / cache
+*.egg-info/
+*.egg
+.eggs/
+.cache/
+.pytest_cache/
+.coverage
+
+# Node (if using Tailwind CLI or npm)
+node_modules/
+package-lock.json
+
+# Tailwind build output (optional — only if auto-generated)
+dist/
+.build/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Env / secrets
+.env
+.env.*
+
+# Deployment metadata
+*.tar.gz
+*.zip
+.gcloud/
+.railway/
+render.yaml
+
+
+# Rope Project
+.ropeproject/

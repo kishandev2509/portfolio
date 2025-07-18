@@ -1,0 +1,33 @@
+name: Update Portfolio JSON Daily
+
+on:
+  schedule:
+    - cron: "0 1 * * *"  # Runs daily at 01:00 UTC
+  workflow_dispatch:     # Allow manual trigger too
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run JSON update script
+        run: python update_portfolio_data.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add portfolio_data.json
+          git commit -m "🔄 Daily portfolio update [skip ci]" || echo "No changes to commit"
+          git push
