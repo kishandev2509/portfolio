@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "cachetools>=6.1.0",
     "djlint>=1.36.4",
     "flask>=3.1.1",
     "gunicorn>=23.0.0",

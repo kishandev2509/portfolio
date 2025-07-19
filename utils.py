@@ -2,8 +2,11 @@ import base64
 import markdown
 import requests
 from markupsafe import Markup
+from cachetools import TTLCache
+from cachetools.func import ttl_cache
 
 
+@ttl_cache(maxsize=50, ttl=86400)  
 def get_readme(user, repo):
     try:
         response = requests.get(f"https://api.github.com/repos/{user}/{repo}/readme")
