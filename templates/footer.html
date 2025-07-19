@@ -1,9 +1,9 @@
-<footer class="bg-gray-950 text-gray-300 py-10 mt-16 border-t border-gray-800">
+<footer class="bg-[var(--bg-color-primary)] text-[var(--text-color-primary)] py-10 mt-16 border-t border-gray-800">
 	<div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-6">
 		<!-- About -->
 		<div class="md:w-1/3">
 			<h2 class="text-xl font-semibold mb-2">Kishan Dev</h2>
-			<p class="text-sm text-gray-400">
+			<p class="text-sm text-[var(--text-color-secondary)]">
 				Python developer passionate about building smart, modern web apps using Flask, React, and machine
 				learning.
 			</p>
@@ -12,11 +12,11 @@
 		<!-- Quick Links -->
 		<div class="md:w-1/3">
 			<h2 class="text-xl font-semibold mb-2">Quick Links</h2>
-			<ul class="space-y-1 text-sm">
-				<li><a href="{{ url_for('home') }}" class="hover:text-blue-400">Home</a></li>
-				<li><a href="{{ url_for('projects') }}" class="hover:text-blue-400">Projects</a></li>
-				<li><a href="{{ url_for('about') }}" class="hover:text-blue-400">About</a></li>
-				<li><a href="{{ url_for('contact') }}" class="hover:text-blue-400">Contact</a></li>
+			<ul class="space-y-1 text-sm text-[var(--text-color-secondary)]">
+				<li><a href="{{ url_for('home') }}" class="hover:text-[var(--text-hover-color)]">Home</a></li>
+				<li><a href="{{ url_for('projects') }}" class="hover:text-[var(--text-hover-color)]">Projects</a></li>
+				<li><a href="{{ url_for('about') }}" class="hover:text-[var(--text-hover-color)]">About</a></li>
+				<li><a href="{{ url_for('contact') }}" class="hover:text-[var(--text-hover-color)]">Contact</a></li>
 			</ul>
 		</div>
 
@@ -26,7 +26,7 @@
 			<ul class="space-y-1 text-sm">
 				{% for name,url in social_links.items() %}
 				<li>
-					<a href="{{ url }}" target="_blank" class="hover:text-blue-400 flex flex-row gap-3 py-2">
+					<a href="{{ url }}" target="_blank" class="hover:text-[var(--text-hover-color)] flex flex-row gap-3 py-2">
 						<img
 							src="{{ url_for('static', filename='icons/' ~ name|lower ~ '.svg') }}"
 							alt=""

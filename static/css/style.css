@@ -1,3 +1,20 @@
 .motionHoverZoomIn {
 	will-change: transform, box-shadow;
 }
+:root {
+	--bg-color-primary: #c1c6cc;
+	--bg-color-secondary: #b8b9b9;
+	--text-color-primary: #111827;
+	--text-color-secondary: #111827;
+	--text-hover-color: #1447e6;
+	--accent-color: #9ea3a3;
+}
+
+.dark {
+	--bg-color-primary: #101828;
+	--bg-color-secondary: #1e2939;
+	--text-color-primary: #ffffff;
+	--text-color-secondary: #ffffff;
+	--text-hover-color: #51a2ff;
+	--accent-color: #2e6780;
+}

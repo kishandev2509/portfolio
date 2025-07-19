@@ -1,3 +1,14 @@
+ const root = document.documentElement;
+  const current = localStorage.getItem("theme") || "dark";
+  if (current === "dark") root.classList.add("dark");
+
+  function toggleTheme() {
+    root.classList.toggle("dark");
+    const theme = root.classList.contains("dark") ? "dark" : "light";
+    localStorage.setItem("theme", theme);
+  }
+
+
 document.addEventListener("DOMContentLoaded", function () {
 	const toggleBtn = document.getElementById("menu-toggle");
 	const navLinks = document.getElementById("nav-links");
@@ -32,7 +43,7 @@ function hoverZoomIn(elem) {
 	Motion.hover(elem, (el) => {
 		Motion.animate(
 			el,
-			{ scale: 1.05, boxShadow: "10px 10px 20px rgba(25, 49, 85, 0.2)" },
+			{ scale: 1.05, boxShadow: "0 10px 20px rgba(25, 49, 85, 0.2)" },
 			{ duration: 0.2, easing: "ease-in-out" }
 		);
 		return () =>
