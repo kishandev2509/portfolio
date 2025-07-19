@@ -8,7 +8,8 @@
 			content="A showcase of my projects, skills, and experience. Welcome to my portfolio website." />
 		<meta name="keywords" content="portfolio, projects, web development, programming, skills, experience" />
 		<title>{% block title %}My Portfolio{% endblock title %}</title>
-        {% block head %}{% endblock head %}
+		{% block head %}{% endblock head %}
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
 		<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 	</head>

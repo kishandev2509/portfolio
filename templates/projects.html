@@ -1,19 +1,41 @@
-{% extends "base.html" %}
-{% block title %}Projects{% endblock %}
-{% block content %}
-<h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Projects</h2>
+{% extends "base.html" %} {% block title %}Projects{% endblock %} {% block content %}
+<h1 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Projects</h1>
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-  {% for project in projects %}
-  <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="{{ loop.index0 * 100 }}">
-  <h2 class="text-3xl"> {{project.display_name}} </h2>
-    <img src="{{ project.image }}" alt="{{ project.title }}" class="rounded mb-4 w-full">
-    <h3 class="text-xl font-semibold mb-2">{{ project.title }}</h3>
-    <p class="text-gray-400 mb-2 border-double">{{ project.description }}</p>
-    <p class="text-gray-400 mb-2 text-[0.6rem]">CREATED AT: {{ project.created_at }} </p>
-    <p class="text-gray-400 mb-2 text-[0.6rem]">UPDATED AT: {{ project.updated_at }}</p>
-    <a href="{{ url_for('project_repo', repo=project.name,user=project.user) }}" target="_blank" class="text-blue-400 hover:underline">View Project →</a>
-  </div>
-  {% endfor %}
+	{% for project in projects %}
+	<div
+		class="relative group bg-gray-800 p-6 rounded-lg shadow-lg motionHoverZoomIn overflow-hidden"
+		data-aos="zoom-in"
+		data-aos-delay="{{ loop.index0 * 100 }}">
+		<!-- Fake link overlay -->
+		<a
+			href="{{ url_for('project_repo', repo=project.name, user=project.user) }}"
+			class="absolute inset-0 z-10"
+			aria-label="View project"></a>
+
+		<!-- Actual card content (z-20 to stay above overlay) -->
+		<div class="z-20 pointer-events-none flex flex-col size-full">
+			<h2 class="text-3xl text-white">{{ project.display_name }}</h2>
+			{% if project.image %}
+			<img src="{{ project.image }}" alt="{{ project.title }}" class="rounded mb-4 w-full" />
+			{% endif %}
+			<p class="text-gray-400 mb-2 text-justify">{{ project.description }}</p>
+			<div class="mt-auto flex justify-between items-end">
+				<div class="flex flex-col text-gray-400 text-xs">
+					<p>Created at: {{ project.created_at }}</p>
+					<p>Updated at: {{ project.updated_at }}</p>
+				</div>
+				<div class="pointer-events-auto text-right z-30">
+					<p class="mt-2 text-blue-400 hover:underline pointer-events-auto">
+						<a href="https://github.com/{{ project.user }}/{{ project.name }}" target="_blank">
+							View on GitHub →
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% endfor %}
 </div>
 {% endblock %}

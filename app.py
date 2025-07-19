@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, redirect, render_template, request, url_for
 from datetime import datetime
 import json
 
@@ -29,10 +29,16 @@ def home():
 def projects():
     return render_template("projects.html", projects=projects_data)
 
+@app.route("/projects/<user>")
+def profile_page(user):
+    repo = user
+    content = get_readme(user,repo)
+    return render_template("readme.html", content=content,user=user,repo="")
+
 @app.route('/projects/<user>/<repo>')
 def project_repo(user,repo):
-    print(user)
-    print(repo)
+    if user == repo:
+        return redirect(url_for('profile_page', user=user))
     content = get_readme(user,repo)
     return render_template("readme.html", content=content,user=user,repo=repo)
 
