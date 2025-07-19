@@ -4,14 +4,14 @@ import requests
 from markupsafe import Markup
 
 
-def get_readme(user,repo):
+def get_readme(user, repo):
     url = f"https://api.github.com/repos/{user}/{repo}/readme"
     headers = {"Accept": "application/vnd.github.v3+json"}
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
         data = response.json()
         content = base64.b64decode(data["content"]).decode("utf-8")
-        html = markdown.markdown(content)
+        html = markdown.markdown(content, extensions=["tables", "fenced_code", "nl2br"])
         return Markup(html)
     else:
         return Markup("<p><em>README not available.</em></p>")
