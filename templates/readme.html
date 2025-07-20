@@ -3,13 +3,13 @@
 {% endblock head %} {% block content %}
 <div class="flex justify-between items-center">
 	<h2
-		class="text-3xl font-extrabold tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 drop-shadow-lg italic py-2 w-8/9">
+		class="text-3xl font-extrabold tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[var(--gradient-color-1)] to-[var(--gradient-color-2)] drop-shadow-lg italic py-2 w-8/9">
 		{{user}} {% if repo != "" %} => {% endif %}{{repo}}
 	</h2>
 	<a
 		href="https://github.com/{{user}}/{{repo}}"
 		target="_blank"
-		class="px-4 py-2 my-1 backdrop-blur-md bg-white/10 border border-white/20 w-1/9 min-w-fit text-[var(--text-color-primary)] text-center font-bold rounded-lg shadow-lg hover:bg-white/20 hover:scale-105 transition duration-300 ease-in-out">
+		class="px-4 py-2 my-1 backdrop-blur-md  bg-[var(--bg-color-accent)] hover:bg-[var(--bg-color-secondary)] border border-[var(--btn-border-color)] w-1/9 min-w-fit text-[var(--text-color-primary)] text-center font-bold rounded-lg shadow-lg hover:bg-white/20 hover:scale-105 transition duration-300 ease-in-out">
 		Open in Github
 	</a>
 </div>

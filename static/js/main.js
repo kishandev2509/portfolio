@@ -1,7 +1,4 @@
-document.documentElement.classList.toggle(
-	"dark",
-	localStorage.theme === "dark" 
-);
+document.documentElement.classList.toggle("dark", localStorage.theme === "dark");
 // document.documentElement.classList.toggle(
 // 	"dark",
 // 	localStorage.theme === "dark" ||
@@ -28,9 +25,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	document.querySelectorAll(".motionHoverZoomIn").forEach((project_card) => hoverZoomIn(project_card));
 });
 
+let menuVisible = false;
 function toggleHeight(elem) {
-	let visible = false;
-	if (!visible) {
+	if (!menuVisible) {
 		elem.classList.remove("hidden");
 		Motion.animate(
 			elem,
@@ -46,7 +43,7 @@ function toggleHeight(elem) {
 			elem.classList.add("hidden");
 		});
 	}
-	visible = !visible;
+	menuVisible = !menuVisible;
 }
 
 function hoverZoomIn(elem) {

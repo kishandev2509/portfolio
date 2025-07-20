@@ -24,6 +24,10 @@ def inject_footer_data():
             "About":r"{{ url_for('about') }}",
             "Projects":r"{{ url_for('projects') }}",
             "Contact":r"{{ url_for('contact') }}",
+        },
+        "quick_links":{
+            "About":r"{{ url_for('about') }}",
+            "Contact":r"{{ url_for('contact') }}",
         }
     }
 

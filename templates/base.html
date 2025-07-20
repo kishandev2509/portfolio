@@ -13,9 +13,12 @@
 		<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 		<style type="text/tailwindcss">
-		@import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
-</style>
+			@import "tailwindcss";
+			@custom-variant dark (&:where(.dark, .dark *));
+			@theme {
+				--breakpoint-md: 56.5rem;
+			}
+		</style>
 	</head>
 	<body class="bg-[var(--bg-color-primary)] text-[var(--text-color-primary)]">
 		{% include "header.html" %}
