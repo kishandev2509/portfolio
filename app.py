@@ -10,7 +10,7 @@ with open("./projects_data.json","r") as file:
     projects_data = json.load(file)
 
 @app.context_processor
-def inject_footer_data():
+def inject_data():
     return {
         "current_year": datetime.now().year,
         "github_username": "kishandev2509",
