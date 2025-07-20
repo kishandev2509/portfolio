@@ -1,3 +1,26 @@
 .motionHoverZoomIn {
 	will-change: transform, box-shadow;
 }
+:root {
+	--bg-color-primary: #c1c6cc;
+	--bg-color-secondary: #b8b9b9;
+	--text-color-primary: #1b1b1b;
+	--text-color-secondary: #4b4b4b;
+	--text-hover-color: #1447e6;
+	--bg-color-accent: #9ea3a3;
+	--btn-border-color: #414242;
+	--gradient-color-1: #1f2020;
+	--gradient-color-2: #4a5353;
+}
+
+.dark {
+	--bg-color-primary: #101828;
+	--bg-color-secondary: #1e2939;
+	--text-color-primary: #ffffff;
+	--text-color-secondary: #adadad;
+	--text-hover-color: #51a2ff;
+	--bg-color-accent: #2e6780;
+	--btn-border-color: #abb1b1;
+	--gradient-color-1: #d1d4d4;
+	--gradient-color-2: #8f9494;
+}

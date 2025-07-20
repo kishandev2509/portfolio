@@ -1,14 +1,14 @@
 {% extends "base.html" %} {% block title %}Home{% endblock title %} {% block content %}
-<section class="flex flex-col md:flex-row min-h-screen items-center justify-center px-4 md:px-16">
+<section class="flex flex-col md:flex-row min-h-screen items-center justify-center px-4 md:px-16 lg:max-w-[80%] m-auto">
 	<div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
 		<h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Kishan</h1>
-		<p class="text-lg text-gray-300 mb-6">
+		<p class="text-lg text-[var(--text-color-secondary)] mb-6">
 			Python developer with experience in Flask, React, and machine learning — crafting web applications with
 			clean UI and meaningful functionality.
 		</p>
 		<a
 			href="{{ url_for('projects') }}"
-			class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">
+			class="font-semibold py-2 px-4 rounded transition duration-300 text-[var(--text-color-primary)] bg-[var(--bg-color-accent)] hover:bg-[var(--bg-color-secondary)] hover:text-[var(--text-hover-color)]">
 			View Projects
 		</a>
 	</div>

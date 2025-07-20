@@ -1,3 +1,21 @@
+document.documentElement.classList.toggle("dark", localStorage.theme === "dark");
+// document.documentElement.classList.toggle(
+// 	"dark",
+// 	localStorage.theme === "dark" ||
+// 		(!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+// );
+
+function toggleTheme() {
+	if (localStorage.theme === "dark") {
+		localStorage.removeItem("theme");
+		console.log("theme removed");
+	} else {
+		localStorage.theme = "dark";
+		console.log("dark theme");
+	}
+	document.documentElement.classList.toggle("dark");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
 	const toggleBtn = document.getElementById("menu-toggle");
 	const navLinks = document.getElementById("nav-links");
@@ -7,9 +25,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	document.querySelectorAll(".motionHoverZoomIn").forEach((project_card) => hoverZoomIn(project_card));
 });
 
+let menuVisible = false;
 function toggleHeight(elem) {
-	let visible = false;
-	if (!visible) {
+	if (!menuVisible) {
 		elem.classList.remove("hidden");
 		Motion.animate(
 			elem,
@@ -25,14 +43,14 @@ function toggleHeight(elem) {
 			elem.classList.add("hidden");
 		});
 	}
-	visible = !visible;
+	menuVisible = !menuVisible;
 }
 
 function hoverZoomIn(elem) {
 	Motion.hover(elem, (el) => {
 		Motion.animate(
 			el,
-			{ scale: 1.05, boxShadow: "10px 10px 20px rgba(25, 49, 85, 0.2)" },
+			{ scale: 1.05, boxShadow: "0 10px 20px rgba(25, 49, 85, 0.2)" },
 			{ duration: 0.2, easing: "ease-in-out" }
 		);
 		return () =>
