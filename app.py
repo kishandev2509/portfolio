@@ -20,14 +20,14 @@ def inject_footer_data():
             "EmailMe":"mailto:kishandevprajapati4@gmail.com"
         },
         "nav_links":{
-            "Home":r"{{ url_for('home') }}",
-            "About":r"{{ url_for('about') }}",
-            "Projects":r"{{ url_for('projects') }}",
-            "Contact":r"{{ url_for('contact') }}",
+            "Home":url_for('home'),
+            "About":url_for('about'),
+            "Projects":url_for('projects'),
+            "Contact":url_for('contact'),
         },
         "quick_links":{
-            "About":r"{{ url_for('about') }}",
-            "Contact":r"{{ url_for('contact') }}",
+            "About":url_for('about'),
+            "Contact":url_for('contact'),
         }
     }
 
