@@ -42,16 +42,16 @@
         "description": null,
         "user": "kishandev2509",
         "created_at": "2025-07-11 12:21",
-        "updated_at": "2025-07-18 13:57"
+        "updated_at": "2025-07-19 02:56"
     },
     {
         "display_name": "Leetcode Questions",
         "name": "leetcode-questions",
         "html_url": "https://github.com/kishandev2509/leetcode-questions",
-        "description": "This repository the questoins, solved on leetcode.",
+        "description": "This repository contains the questoins, solved on leetcode.",
         "user": "kishandev2509",
         "created_at": "2025-07-16 15:24",
-        "updated_at": "2025-07-18 17:28"
+        "updated_at": "2025-07-19 17:52"
     },
     {
         "display_name": "Lms",
@@ -69,7 +69,7 @@
         "description": "This is my portfolio site.",
         "user": "kishandev2509",
         "created_at": "2025-07-18 14:31",
-        "updated_at": "2025-07-18 16:10"
+        "updated_at": "2025-07-19 06:17"
     },
     {
         "display_name": "Tic Tac Toe",
