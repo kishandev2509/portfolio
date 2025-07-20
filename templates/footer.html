@@ -1,3 +1,4 @@
+{% from "components/icons.html" import icon %}
 <footer class="bg-[var(--bg-color-primary)] text-[var(--text-color-primary)] py-10 mt-16 border-t border-gray-800">
 	<div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-6">
 		<!-- About -->
@@ -26,12 +27,11 @@
 			<ul class="space-y-1 text-sm">
 				{% for name,url in social_links.items() %}
 				<li>
-					<a href="{{ url }}" target="_blank" class="hover:text-[var(--text-hover-color)] flex flex-row gap-3 py-2">
-						<img
-							src="{{ url_for('static', filename='icons/' ~ name|lower ~ '.svg') }}"
-							alt=""
-							width="24"
-							height="24" />{{ name }}
+					<a
+						href="{{ url }}"
+						target="_blank"
+						class="hover:text-[var(--text-hover-color)] flex flex-row gap-3 py-2">
+						{{ icon(name.lower()) }} {{ name }}
 					</a>
 				</li>
 				{% endfor %}

@@ -18,6 +18,12 @@ def inject_footer_data():
             "GitHub": "https://github.com/kishandev2509",
             "LinkedIn": "https://linkedin.com/in/kishandev2509",
             "EmailMe":"mailto:kishandevprajapati4@gmail.com"
+        },
+        "nav_links":{
+            "Home":r"{{ url_for('home') }}",
+            "About":r"{{ url_for('about') }}",
+            "Projects":r"{{ url_for('projects') }}",
+            "Contact":r"{{ url_for('contact') }}",
         }
     }
 

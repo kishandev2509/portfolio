@@ -1,13 +1,23 @@
- const root = document.documentElement;
-  const current = localStorage.getItem("theme") || "dark";
-  if (current === "dark") root.classList.add("dark");
+document.documentElement.classList.toggle(
+	"dark",
+	localStorage.theme === "dark" 
+);
+// document.documentElement.classList.toggle(
+// 	"dark",
+// 	localStorage.theme === "dark" ||
+// 		(!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+// );
 
-  function toggleTheme() {
-    root.classList.toggle("dark");
-    const theme = root.classList.contains("dark") ? "dark" : "light";
-    localStorage.setItem("theme", theme);
-  }
-
+function toggleTheme() {
+	if (localStorage.theme === "dark") {
+		localStorage.removeItem("theme");
+		console.log("theme removed");
+	} else {
+		localStorage.theme = "dark";
+		console.log("dark theme");
+	}
+	document.documentElement.classList.toggle("dark");
+}
 
 document.addEventListener("DOMContentLoaded", function () {
 	const toggleBtn = document.getElementById("menu-toggle");
