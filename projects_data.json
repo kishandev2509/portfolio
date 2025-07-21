@@ -12,19 +12,19 @@
         "display_name": "Dajarvis",
         "name": "DAJarvis",
         "html_url": "https://github.com/kishandev2509/DAJarvis",
-        "description": null,
+        "description": "\ud83e\udd16 DAJarvis \u2013 Your AI Desktop Assistant A smart Python-based voice assistant with a PyQt5 GUI, capable of answering queries, translating text, monitoring system status, sending emails, and automating tasks using the OpenAI API. Built for productivity, learning, and hands-free control.",
         "user": "kishandev2509",
         "created_at": "2023-03-24 18:24",
-        "updated_at": "2025-07-12 03:12"
+        "updated_at": "2025-07-20 21:10"
     },
     {
         "display_name": "Inventory Management System",
         "name": "Inventory-Management-System",
         "html_url": "https://github.com/kishandev2509/Inventory-Management-System",
-        "description": null,
+        "description": "\ud83d\uddc3\ufe0f Inventory Management System A user-friendly and efficient web-based platform to manage inventory, stock levels, and suppliers. Built with Tkinter and SQLite, it offers secure login, product tracking, and real-time updates \u2014 ideal for small businesses and academic demos.",
         "user": "kishandev2509",
         "created_at": "2022-11-23 14:57",
-        "updated_at": "2025-07-12 05:01"
+        "updated_at": "2025-07-20 21:08"
     },
     {
         "display_name": "Kaggle Notebooks",
@@ -51,7 +51,7 @@
         "description": "This repository contains the questoins, solved on leetcode.",
         "user": "kishandev2509",
         "created_at": "2025-07-16 15:24",
-        "updated_at": "2025-07-19 17:52"
+        "updated_at": "2025-07-20 17:06"
     },
     {
         "display_name": "Lms",
@@ -69,7 +69,7 @@
         "description": "This is my portfolio site.",
         "user": "kishandev2509",
         "created_at": "2025-07-18 14:31",
-        "updated_at": "2025-07-19 06:17"
+        "updated_at": "2025-07-20 20:47"
     },
     {
         "display_name": "Tic Tac Toe",
