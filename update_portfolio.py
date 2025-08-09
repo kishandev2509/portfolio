@@ -1,7 +1,8 @@
-import re
 import json
-import requests
+import re
 from datetime import datetime
+
+import requests
 
 
 def get_projects(username: str):
@@ -16,7 +17,7 @@ def get_projects(username: str):
         repos = response.json()
         for repo in repos:
             project = {}
-            if repo["fork"] == True:
+            if repo["fork"]:
                 continue
             project["display_name"] = " ".join(re.split("[-_]", repo["name"])).title()
             project["name"] = repo["name"]
