@@ -1,8 +1,8 @@
-import app
+from app import app
 
 
 def main():
-    app.app.run()
+    app.run()
 
 
 if __name__ == "__main__":
