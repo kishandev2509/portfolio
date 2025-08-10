@@ -1,4 +1,5 @@
 import re
+import time
 
 import markdown
 import requests
@@ -24,14 +25,14 @@ def get_readme(user, repo):
 
 
 def get_json_data():
-    url = "https://cdn.jsdelivr.net/gh/kishandev2509/githubInfoJson@latest/projects_data.json"
+    url = f"https://cdn.jsdelivr.net/gh/kishandev2509/githubInfoJson@latest/projects_data.json?v={int(time.time())}"
     resp = requests.get(url)
     resp.raise_for_status()
     return resp.json()
 
 
 def main():
-    print(get_readme("kishandev2509", "Inventory-Management-System"))
+    print(int(time.time()), get_json_data()[2])
 
 
 if __name__ == "__main__":
