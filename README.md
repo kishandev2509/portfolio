@@ -1,6 +1,6 @@
 # 🌐 KD's Portfolio Website
 
-A fully responsive and professional **personal portfolio website** built using **HTML**, **CSS**, and **JavaScript**, showcasing skills, projects, and a downloadable resume with a clean and modern UI.
+A fully responsive and professional **personal portfolio website** built using **HTML**, **CSS**, **JavaScript**, and **Flask** showcasing skills, projects, and a downloadable resume with a clean and modern UI.
 
 ---
 
@@ -21,7 +21,8 @@ A fully responsive and professional **personal portfolio website** built using *
 * **Frontend:** HTML5, CSS3, JavaScript (Vanilla JS)
 * **Animations:** AOS (Animate on Scroll)
 * **Icons:** Custom SVGs or embedded images
-* **Deployment:** [Render](https://portfolio-e474.onrender.com)
+* **Backend:** Flask
+* **Deployment:** [Render](https://portfolio-e474.onrender.com)/[Vercel](https://portfolio-git-master-kishandev2509s-projects.vercel.app/)
 
 ---
 
@@ -62,19 +63,20 @@ A fully responsive and professional **personal portfolio website** built using *
 
 4. **Open the project**
 
-   Simply open `index.html` in your browser.
+   Simply open project in code editor.
 
-5. **(Optional) Deploy using Render**
+5. **(Optional) Deploy using Render/Vercel**
 
    * Push your code to GitHub
-   * Connect your repo to [Render](https://render.com)
-   * Select **Static Site**, and deploy using default `index.html` as entry point
+   * Connect your repo to [Render](https://render.com)/[Vercel](https://vercel.com/)
+   * Deploy using default `main.py` as entry point
 
 ---
 
 ## 🔗 Live Demo
 
 🌍 Visit here: [Portfolio Website on Render](https://portfolio-e474.onrender.com)
+🌍 Visit here: [Portfolio Website on Vercel](https://portfolio-git-master-kishandev2509s-projects.vercel.app/)
 
 ---
 
