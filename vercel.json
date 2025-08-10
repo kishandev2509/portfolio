@@ -1,0 +1,4 @@
+{
+  "builds": [{ "src": "main.py", "use": "@vercet/python" }],
+  "routes": [{ "src": "/(.*)", "dest": "main.py" }]
+}
