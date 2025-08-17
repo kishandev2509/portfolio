@@ -20,6 +20,9 @@
 			<img src="{{ project.image }}" alt="{{ project.title }}" class="rounded mb-4 w-full" />
 			{% endif %}
 			<p class="text-[var(--text-color-secondary)] mb-2 text-justify">{{ project.description }}</p>
+			{% if project.homepage != '' %}
+			<a href="{{ project.homepage }}" target="_blank" class="pointer-events-auto z-30 mb-2"> {{ project.homepage }} </a>
+			{% endif %}
 			<div class="mt-auto flex justify-between items-end">
 				<div class="flex flex-col text-[var(--text-color-secondary)] text-xs">
 					<p>Created at: {{ project.created_at }}</p>
